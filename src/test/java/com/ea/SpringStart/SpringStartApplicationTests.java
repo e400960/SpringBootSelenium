@@ -19,6 +19,8 @@ class SpringStartApplicationTests {
 	@Autowired
 	private HomePage homePage;
 
+	@Autowired
+	private LoginPage loginPage;
 	@Value("${app.url}")
 	private String appUrl;
 
@@ -31,10 +33,10 @@ class SpringStartApplicationTests {
 	@Test
 	void contextLoads1() {
 		System.out.println(appUrl);
-//		homePage.Navigate(appUrl);
-//		homePage.ClickLogin();
-//		loginPage.Login("admin", "password");
-//		loginPage.ClickLogin();
+		homePage.Navigate(appUrl);
+		homePage.ClickLogin();
+		loginPage.Login("admin", "password");
+		loginPage.ClickLogin();
 	}
 
 	@Test
